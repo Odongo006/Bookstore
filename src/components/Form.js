@@ -25,8 +25,8 @@ const Form = () => {
     <div className="form">
       <form>
         <h3>Add a Book</h3>
-        <input type="text" name="title" placeholder="title" />
-        <input type="text" name="author" placeholder="author" />
+        <input type="text" name="title" placeholder="title" onChange={(e) => setTitle(e.target.value)} required />
+        <input type="text" name="author" placeholder="author" onChange={(e) => setAuthor(e.target.value)} required />
         <button type="submit" onClick={addBookHandler}>Add Book</button>
       </form>
     </div>
