@@ -1,12 +1,14 @@
+import React from 'react';
+
 const Form = () => (
-  <div className="form">
+  <>
     <form>
-      <h3>Add a Book</h3>
-      <input type="text" name="title" placeholder="title" />
-      <input type="text" name="author" placeholder="author" />
-      <button type="submit">Add Book</button>
+      <h1>ADD NEW BOOK</h1>
+      <input type="text" placeholder="Book title" required />
+      <input type="text" placeholder="Author" required />
+      <button type="button">ADD BOOK</button>
     </form>
-  </div>
+  </>
 );
 
 export default Form;
