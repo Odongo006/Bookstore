@@ -4,7 +4,7 @@ const initialState = {
   categories: [],
 };
 
-export const categoriesSlice = createSlice({
+const categoriesSlice = createSlice({
   name: 'categories',
   initialState,
   reducers: {
