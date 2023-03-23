@@ -1,35 +1,44 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { getBooks } from '../redux/books/bookslice';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { booksActions, removeBook } from '../redux/books/bookslice';
 
-function Book() {
-  const books = useSelector((state) => state.books.bookList);
-  const status = useSelector((state) => state.books.status);
+function Book({
+  id, title, author,
+}) {
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(getBooks());
-  }, [dispatch]);
-
-  if (status === 'loading') {
-    return <div>Loading...</div>;
-  }
-
+  const removeHandler = (event) => {
+    const { id } = event.target.dataset;
+    dispatch(booksActions.removeBook(id));
+    dispatch(removeBook(id));
+  };
   return (
     <>
-      <h2>Book List</h2>
-      <ul>
-        {books.map((book) => (
-          <li key={book.item_id}>
-            {book.title}
-            {' '}
-            by
-            {book.author}
+      <div className="booklist">
+        <h1>List of Books</h1>
+        <ul>
+          <li className="book-list">
+            <p>{title}</p>
+            <p>{author}</p>
+            <button
+              data-id={id}
+              type="button"
+              onClick={removeHandler}
+            >
+              remove
+            </button>
           </li>
-        ))}
-      </ul>
+        </ul>
+      </div>
     </>
   );
 }
+
+Book.propTypes = {
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+};
 
 export default Book;
