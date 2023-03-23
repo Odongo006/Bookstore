@@ -8,17 +8,10 @@ export const categoriesSlice = createSlice({
   name: 'categories',
   initialState,
   reducers: {
-    checkStatus: (state, action) => {
-      const newState = {
-        ...state,
-        categories: action.payload === 'Under construction'
-          ? 'Under construction'
-          : state.categories,
-      };
-
-      // return the new state object
-      return newState;
-    },
+    checkStatus: ({ ...state }) => ({
+      ...state,
+      status: 'Under Construction',
+    }),
   },
 });
 
