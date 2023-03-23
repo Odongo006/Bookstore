@@ -2,7 +2,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/Mw6KlxQrMBAmuPW6nuKy/books';
+const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/hNgqcuwZELgkJT0cAZJB/books';
 
 export const addBook = createAsyncThunk(
   'books/addBook',
@@ -12,15 +12,13 @@ export const addBook = createAsyncThunk(
   },
 );
 
-export const getBooks = createAsyncThunk('books/getBooks', async () => {
-  const response = await axios.get(url);
-  const { data } = response;
-  const books = Object.keys(data).map((key) => ({
-    id: key,
-    ...data[key][0],
-  }));
-  return books;
-});
+export const getBooks = createAsyncThunk(
+  'books/getBooks',
+  async () => {
+    const response = await axios(url);
+    return response.data;
+  },
+);
 
 export const removeBook = createAsyncThunk(
   'books/removeBook',
@@ -53,6 +51,7 @@ const booksSlice = createSlice({
       .addCase(getBooks.pending, (state) => {
         state.status = 'loading';
       })
+
       .addCase(getBooks.fulfilled, (state, action) => {
         const responseObject = action.payload;
         const newBookArr = Object.keys(responseObject).map((id) => {
@@ -63,16 +62,19 @@ const booksSlice = createSlice({
         state.status = 'succeeded';
         state.bookList = newBookArr;
       })
+
       .addCase(getBooks.rejected, (state, action) => {
         state.status = 'error';
         state.error = action.error.message;
       })
+
       .addCase(addBook.fulfilled, (state, action) => {
         state.status = 'succeeded';
         state.newStatus = action.payload;
       })
+
       .addCase(removeBook.fulfilled, (state, action) => {
-        state.status = 'succeeded';
+        state.status = 'succeded';
         state.newStatus = action.payload;
       });
   },
