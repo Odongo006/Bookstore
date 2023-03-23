@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../redux/books/bookslice';
 
 function Form() {
@@ -10,7 +11,7 @@ function Form() {
   const handleAddBook = (event) => {
     event.preventDefault();
     dispatch(addBook({
-      item_id: `${Math.random() * 100}`,
+      item_id: uuidv4(),
       title,
       author,
     }));

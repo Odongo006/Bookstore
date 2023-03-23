@@ -9,7 +9,7 @@ const Book = ({
   const dispatch = useDispatch();
 
   const handleRemoveBook = () => {
-    dispatch(removeBook(id));
+    dispatch(removeBook({ id }));
   };
 
   return (

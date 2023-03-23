@@ -4,14 +4,20 @@ import Book from '../components/Book';
 import Form from '../components/Form';
 
 const Books = () => {
-  const booksArray = useSelector((state) => state.books);
+  const { bookList } = useSelector((state) => state.books);
   return (
     <>
-      {booksArray.map((item) => (
-        <div key={item.item_id}>
-          <Book id={item.item_id} title={item.title} author={item.author} />
-        </div>
-      ))}
+      <ul>
+        {bookList.map((book) => (
+          <Book
+            key={book.item_id}
+            id={book.item_id}
+            title={book.title}
+            author={book.author}
+            category={book.category}
+          />
+        ))}
+      </ul>
       <Form />
     </>
   );
