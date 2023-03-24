@@ -2,6 +2,7 @@ import uniqid from 'uniqid';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { booksActions, addBook } from '../redux/books/bookslice';
+import styles from './styles/Form.module.css';
 
 function Form() {
   const dispatch = useDispatch();
@@ -24,14 +25,14 @@ function Form() {
   };
 
   return (
-    <>
+    <div className={styles.form_container}>
       <form>
-        <h3>Add New Book</h3>
-        <input type="text" name="title" placeholder="title" onChange={(e) => setTitle(e.target.value)} required />
-        <input type="text" name="author" placeholder="author" onChange={(e) => setAuthor(e.target.value)} required />
-        <button type="submit" onClick={addBookHandler} className="add-book-btn">Add Book</button>
+        <h2>Add New Book</h2>
+        <input type="text" name="title" placeholder="title" onChange={(e) => setTitle(e.target.value)} className={styles.input_1} required />
+        <input type="text" name="author" placeholder="author" onChange={(e) => setAuthor(e.target.value)} className={styles.input_2} required />
+        <button type="submit" onClick={addBookHandler} className={styles.addBook_btn}>Add Book</button>
       </form>
-    </>
+    </div>
   );
 }
 
