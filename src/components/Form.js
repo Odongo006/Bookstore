@@ -29,7 +29,7 @@ function Form() {
         <h3>Add New Book</h3>
         <input type="text" name="title" placeholder="title" onChange={(e) => setTitle(e.target.value)} required />
         <input type="text" name="author" placeholder="author" onChange={(e) => setAuthor(e.target.value)} required />
-        <button type="submit" onClick={addBookHandler}>Add Book</button>
+        <button type="submit" onClick={addBookHandler} className="add-book-btn">Add Book</button>
       </form>
     </>
   );
