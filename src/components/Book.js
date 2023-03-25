@@ -40,7 +40,7 @@ function Book({
         <div className={styles.bar} />
         <div className={styles.chapterContainer}>
           <div className={styles.chapterone}>CURRENT CHAPTER</div>
-          <p className={styles.chapter}>Chapter 3: &quot;Chapter Title&quot;</p>
+          <div className={styles.chapter}>Chapter 3: &quot;Chapter Title&quot;</div>
           <button className={styles.chapterBtn} type="button">
             <span className={styles.update}>Update Progress</span>
           </button>

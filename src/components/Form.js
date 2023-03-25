@@ -25,12 +25,12 @@ function Form() {
   };
 
   return (
-    <div className={styles.form_container}>
-      <form>
-        <h2>Add New Book</h2>
-        <input type="text" name="title" placeholder="title" onChange={(e) => setTitle(e.target.value)} className={styles.input_1} required />
-        <input type="text" name="author" placeholder="author" onChange={(e) => setAuthor(e.target.value)} className={styles.input_2} required />
-        <button type="submit" onClick={addBookHandler} className={styles.addBook_btn}>Add Book</button>
+    <div>
+      <h2>Add New Book</h2>
+      <form className={styles.form_container}>
+        <input className={styles.input_1} type="text" placeholder="Book title" value={title} onChange={(e) => setTitle(e.target.value)} required />
+        <input className={styles.input_2} type="text" placeholder="Author" value={author} onChange={(e) => setAuthor(e.target.value)} required />
+        <button className={styles.addBook_btn} type="button" onClick={addBookHandler}>Add Book</button>
       </form>
     </div>
   );
