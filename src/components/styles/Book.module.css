@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.book_container {
+  width: 100%;
+  display: flex;
+  padding: 1.5rem;
+  margin-bottom: 0.3rem;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 6px 6px 10px -1px rgba(255, 255, 255, 0.7);
+  border: 1px solid #e4e2e2c2;
+}
+
+.book {
+  width: 50%;
+}
+
+.category {
+  color: #878787;
+  font-weight: 600;
+}
+
+.title {
+  margin-top: 0.188rem;
+  font-size: 1.375rem;
+  letter-spacing: -0.2px;
+  color: #121212;
+  font-weight: 700;
+}
+
+.author {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #4386b4;
+  font-family: "Roboto Slab", serif;
+}
+
+.book_btn {
+  margin-top: 1rem;
+}
+
+.book_btn button {
+  background-color: #fff;
+}
+
+.btn {
+  font-family: "Roboto Slab", serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  border: none;
+  align-items: center;
+  cursor: pointer;
+  color: #4386bf;
+}
+
+.btn_remove {
+  font-family: "Roboto Slab", serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  border: none;
+  border-left: 2px solid #e8e8e8;
+  border-right: 2px solid #e8e8e8;
+  margin: 0.188rem 0.938rem 0.125rem 0;
+  padding: 0 0.8rem;
+  color: #4386bf;
+}
+
+.contain {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding-left: 10rem;
+  width: 20%;
+}
+
+.Oval {
+  width: 4.2rem;
+  height: 4.25rem;
+  border: 10px solid #379cf6;
+  border-left-color: #c4c4c4;
+  border-radius: 50%;
+  -webkit-transform: rotate(25deg);
+  transform: rotate(140deg);
+}
+
+.chapterContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.7rem;
+  padding-top: 1.5rem;
+  margin-right: 9rem;
+}
+
+.chapterBtn {
+  padding: 0.8rem;
+  flex: 2;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  background-color: #2c94f0;
+  border: none;
+  color: #fff;
+  box-shadow: 2px 2px 5px #fff;
+  font-weight: 600;
+}
+
+.update {
+  color: #fff;
+  width: 8.938rem;
+  height: 1.125rem;
+  font-family: "Roboto Slab", serif;
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.bar {
+  height: 4.375rem;
+  margin-top: 2rem;
+  border: 1px solid #e8e8e8;
+  margin-right: 5rem;
+}
+
+.completion {
+  font-size: 2.5rem;
+}
+
+.completed {
+  font-size: 1rem;
+}
+
+.chapter {
+  width: 13.25rem;
+  height: 1.313rem;
+  font-family: "Roboto Slab", serif;
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+}
+
+.chapterone {
+  font-family: "Roboto Slab", serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #8d8181;
+}

@@ -13,6 +13,20 @@
   }
 }
 
+.add-book-btn {
+  margin: 10px;
+  background-color: #61dafb;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-book-btn:hover {
+  background-color: navy;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

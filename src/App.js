@@ -11,7 +11,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Books />} />
         <Route path="/categories" element={<Categories />} />
-        <Route path="/*" element={<h1>Page Not Found!</h1>} />
       </Routes>
     </>
   );
